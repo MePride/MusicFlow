@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="iconColor" format="color" />
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="panelHeight" format="dimension" />
+        <attr name="slidePanelOffset" format="dimension" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="paralaxOffset" format="dimension" />
+        <attr name="directOffset" format="boolean" />
+        <attr name="fadeColor" format="color" />
+        <attr name="flingVelocity" format="integer" />
+        <attr name="dragView" format="reference" />
+        <attr name="dragViewClickable" format="boolean" />
+        <attr name="overlay" format="boolean"/>
+        <attr name="anchorPoint" format="float" />
+        <attr name="initialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="PlayPauseView">
+        <attr name="bg_color" format="color"/>
+        <attr name="btn_color" format="color"/>
+        <attr name="gap_width" format="dimension|reference"/>
+        <attr name="space_padding" format="dimension|reference"/>
+        <attr name="anim_duration" format="integer"/>
+        <attr name="anim_direction">
+            <enum name="positive" value="1"/>
+            <enum name="negative" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <attr name="rectSelector" format="reference"/>
+    <attr name="roundSelector" format="reference"/>
+
+</resources>

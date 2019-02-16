@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ec7a00</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffff</color>
+    <color name="grey">#767676</color>
+    <color name="twenty_percent_black_overlay">#34000000</color>
+
+    <color name="lightgreen">#3bb000</color>
+    <color name="red">#fb3030</color>
+    <color name="greenyellow">#c4ff00</color>
+
+    <color name="first_slide_background">#b0bec5</color>
+    <color name="first_slide_buttons">#546e7a</color>
+
+    <color name="second_slide_background">#9C27B0</color>
+    <color name="second_slide_buttons">#4A148C</color>
+
+    <color name="third_slide_background">#80deea</color>
+    <color name="third_slide_buttons">#00838f</color>
+
+    <color name="fourth_slide_background">#bcaaa4</color>
+    <color name="fourth_slide_buttons">#6d4c41</color>
+
+    <color name="fifth_slide_background">#a5d6a7</color>
+    <color name="fifth_slide_buttons">#388e3c</color>
+
+    <color name="custom_slide_background">#3F51B5</color>
+    <color name="custom_slide_buttons">#1A237E</color>
+
+</resources>

@@ -1,0 +1,76 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">音流</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="social_buttons">Social Button</string>
+
+    <string name="app_summary">一个开源音乐播放器</string>
+
+    <!--网易云音乐登入Fragment-->
+    <string name="netease_count_hint">请输入帐号/手机号</string>
+    <string name="netease_passwd_hint">请输入密码</string>
+    <string name="login">开始登入</string>
+
+    <!--QQ音乐获取数据-->
+    <string name="tencent_count_hint">请输入QQ号</string>
+    <string name="getdata">获取数据</string>
+    <string name="nonlogin">未登录</string>
+
+    <string name="transition_mini_player">mini_player_transition</string>
+    <string name="play">Play</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="go_to_album">Go to album</string>
+    <string name="go_to_artist">Go to artist</string>
+    <string name="add_to_queue">Add to queue</string>
+    <string name="play_next">Play next</string>
+    <string name="new_playlist">New playlist</string>
+    <string name="share">Share</string>
+    <string name="delete_from_device">Delete from device</string>
+    <string name="remove_from_queue">Remove from queue</string>
+
+    <string name="combine_two_strings" translatable="false">%1$s | %2$s</string>
+
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+    <string name="playlist_last_added">Last Added</string>
+    <string name="playlist_recently_played">Recently Played</string>
+    <string name="playlist_top_tracks">My Top Tracks</string>
+
+    <string name="number_song_add_queue"><xliff:g example="1" id="number">%d</xliff:g> song added to the queue.</string>
+    <string name="number_songs_add_queue"><xliff:g example="1" id="number">%d</xliff:g> songs added to the queue.</string>
+    <string name="number_song_add_playlist"><xliff:g example="1" id="number">%d</xliff:g> song added to playlist.</string>
+    <string name="number_songs_add_playlist"><xliff:g example="1" id="number">%d</xliff:g> songs added to playlist.</string>
+
+    <string name="count_song"><xliff:g id="count">%d</xliff:g> song</string>
+    <string name="count_songs"><xliff:g id="count">%d</xliff:g> songs</string>
+    <string name="count_album"><xliff:g id="count">%d</xliff:g> album</string>
+    <string name="count_albums"><xliff:g id="count">%d</xliff:g> albums</string>
+    <string name="count_artist"><xliff:g id="count">%d</xliff:g> artist</string>
+    <string name="count_artists"><xliff:g id="count">%d</xliff:g> artists</string>
+
+    <!--菜单列表-->
+    <string name="message">私信</string>
+    <string name="setting">设置</string>
+    <string name="timer">定时</string>
+    <string name="about">关于</string>
+    <string name="Github">Github</string>
+
+    <string name="pride" translatable="false">Pride</string>
+    <string name="pride_sammary" translatable="false">万恶之源</string>
+    <string name="adminz">adminz</string>
+    <string name="adminz_sammary">程序开光师</string>
+
+    <!--工作条1-->
+    <string name="daily">每日推荐</string>
+
+    <string name="search_hint">搜索歌曲</string>
+
+    <string name="netease">网易云音乐</string>
+    <string name="tencent">QQ音乐</string>
+
+</resources>
