@@ -11,8 +11,8 @@
 - 搜索页
 - 私人FM
 
-![pic1](image\Screenshot_2019-02-17-22-50-35-009_com.mepride.mu.png)
+![pic1](image\pic1.png)
 
-![pic1](image\Screenshot_2019-02-17-22-50-41-897_com.mepride.mu.png)
+![pic2](image\pic2.png)
 
-![pic1](image\Screenshot_2019-02-17-22-50-53-646_com.mepride.mu.png)
+![pic3](image\pic3.png)
