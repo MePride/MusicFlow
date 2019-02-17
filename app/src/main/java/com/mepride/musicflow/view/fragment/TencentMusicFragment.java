@@ -3,6 +3,8 @@ package com.mepride.musicflow.view.fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -14,7 +16,6 @@ import com.mepride.musicflow.R;
 import com.mepride.musicflow.api.TencentMusicApi;
 import com.mepride.musicflow.beans.TencentMusicListBean;
 import com.mepride.musicflow.database.TencentDataBean;
-import com.mepride.musicflow.utils.ToastUtils;
 import com.mepride.musicflow.view.adapter.TencentListAdapter;
 import com.mepride.musicflow.view.base.BaseFragment;
 
@@ -33,6 +34,8 @@ public class TencentMusicFragment extends BaseFragment {
     RecyclerView recyclerView;
     @BindView(R.id.swipeRefresh)
     SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.tencent_tag)
+    TextView tag;
 
     private List<TencentMusicListBean> beans = new ArrayList<>();
 
@@ -78,6 +81,7 @@ public class TencentMusicFragment extends BaseFragment {
                     recyclerView.setAdapter(adapter);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     adapter.notifyDataSetChanged();
+                    tag.setVisibility(View.GONE);
                 }
             });
         }
@@ -116,6 +120,7 @@ public class TencentMusicFragment extends BaseFragment {
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 adapter.notifyDataSetChanged();
                 swipeRefreshLayout.setRefreshing(false);
+                tag.setVisibility(View.GONE);
             }
         });
     }

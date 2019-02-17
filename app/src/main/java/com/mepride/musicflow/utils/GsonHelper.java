@@ -3,11 +3,7 @@ package com.mepride.musicflow.utils;
 import com.google.gson.Gson;
 
 /**
- * author：agxxxx on 2017/3/3 10:49
- * email：agxxxx@126.com
- * blog: http://blog.csdn.net/zuiaisha1
- * github: https://github.com/agxxxx
- * Created by Administrator on 2017/3/3.
+ * Gson工具类
  */
 public class GsonHelper {
 

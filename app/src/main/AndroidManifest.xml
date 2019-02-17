@@ -12,6 +12,7 @@
         android:icon="@drawable/ic_drawable_wave"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_drawable_wave"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
 
@@ -28,6 +29,7 @@
             android:name="notch.config"
             android:value="portrait|landscape" />
 
+        <!--启动页-->
         <activity
             android:name=".view.activity.SplashActivity"
             android:label="@string/app_name"
@@ -39,31 +41,42 @@
                 <!--<data android:scheme="http" />       &lt;!&ndash;响应所有的http协议的Intent&ndash;&gt;-->
             </intent-filter>
         </activity>
+
+        <!--登陆页-->
         <activity android:name=".view.activity.LoginActivity"/>
         <activity
             android:name=".view.activity.TencentListActivity"
             android:theme="@style/DetailListTheme" />
 
+        <!--关于页-->
         <activity android:name=".view.activity.AboutActivity"/>
 
+        <!--私信-->
         <activity android:name=".view.activity.MessageActivity"/>
 
+        <!--网易云歌单详情-->
         <activity android:name=".view.activity.NeteaseListActivity"/>
 
+        <!--网易云每日推送-->
         <activity android:name=".view.activity.DailyActivity"/>
 
+        <!--控制面板-->
         <activity android:name=".view.activity.PlayerActivity"/>
 
+        <!--搜索页面-还没做好-->
         <activity android:name=".view.activity.SearchActivity"/>
 
+        <!--主页-->
         <activity
             android:name=".view.activity.MainActivity"
             android:label="@string/app_name" />
 
+        <!--新手引导-->
         <activity
             android:name=".view.activity.IntroActivity"
             android:theme="@style/Theme.Intro"/>
 
+        <!--音乐服务-->
         <service
             android:name=".service.MusicService"
             android:enabled="true"

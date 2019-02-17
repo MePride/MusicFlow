@@ -1,17 +1,11 @@
 package com.mepride.musicflow.view.activity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,7 +15,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -34,21 +27,14 @@ import com.bumptech.glide.Glide;
 import com.gyf.barlibrary.ImmersionBar;
 import com.mepride.musicflow.App;
 import com.mepride.musicflow.R;
-import com.mepride.musicflow.beans.MessageEvent;
 import com.mepride.musicflow.database.NeteaseDataBean;
 import com.mepride.musicflow.database.TencentDataBean;
-import com.mepride.musicflow.utils.PermissionReq;
 import com.mepride.musicflow.view.base.BaseActivity;
 import com.mepride.musicflow.view.fragment.ActionPageOneFragment;
 import com.mepride.musicflow.view.fragment.LocalMusicFragment;
 import com.mepride.musicflow.view.fragment.MiniPlayerFragment;
 import com.mepride.musicflow.view.fragment.NeteaseMusicFragment;
 import com.mepride.musicflow.view.fragment.TencentMusicFragment;
-import com.mepride.musicflow.weidget.slidinguppanel.SlidingUpPanelLayout;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 import org.litepal.LitePal;
 
 import java.util.ArrayList;
@@ -90,15 +76,15 @@ public class MainActivity extends BaseActivity
     @Override
     protected void initView()
     {
-        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (shouldShowRequestPermissionRationale(
-                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            }
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    RESULT_OK);
-            return;
-        }
+//        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            if (shouldShowRequestPermissionRationale(
+//                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//            }
+//            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+//                    RESULT_OK);
+//            return;
+//        }
 //        PermissionReq.with(this)
 //                .permissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 //                .result(new PermissionReq.Result() {
@@ -278,51 +264,6 @@ public class MainActivity extends BaseActivity
                 miniPlayerFragment.registerListener(App.app.getMusicPlayerService());
             }
         }.start();
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        EventBus.getDefault().register(this);
-    }
-
-    //订阅方法，当接收到事件的时候，会调用该方法
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEvent(MessageEvent event){
-        Log.d("eventbus","getmessage");
-        if (event.isTencent()){
-            MainActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    List<NeteaseDataBean> neteaseDataBean = LitePal.findAll(NeteaseDataBean.class);
-                    if (neteaseDataBean.size()!=0) {
-                        Glide.with(getApplicationContext()).load(neteaseDataBean.get(0).getHeadPic()).into(netease);
-                    }
-                    List<TencentDataBean> tencentDataBean = LitePal.findAll(TencentDataBean.class);
-                    if (tencentDataBean.size()!=0) {
-                        Glide.with(getApplicationContext()).load(tencentDataBean.get(0).getHeadPic()).into(tencent);
-                    }
-                }
-            });
-        }
-        if (event.isNetease()){
-            MainActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    List<NeteaseDataBean> neteaseDataBean = LitePal.findAll(NeteaseDataBean.class);
-                    if (neteaseDataBean.size()!=0) {
-                        Glide.with(getApplicationContext()).load(neteaseDataBean.get(0).getHeadPic()).into(netease);
-                    }
-                }
-            });
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        EventBus.getDefault().unregister(this);
     }
 
     @Override

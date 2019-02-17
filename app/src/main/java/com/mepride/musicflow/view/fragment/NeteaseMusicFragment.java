@@ -3,6 +3,8 @@ package com.mepride.musicflow.view.fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonArray;
@@ -12,20 +14,16 @@ import com.google.gson.JsonParser;
 import com.mepride.musicflow.R;
 import com.mepride.musicflow.beans.NeteaseMusicListBean;
 import com.mepride.musicflow.database.NeteaseDataBean;
-import com.mepride.musicflow.utils.ToastUtils;
 import com.mepride.musicflow.view.adapter.NeteaseListAdapter;
-import com.mepride.musicflow.view.adapter.TencentListAdapter;
 import com.mepride.musicflow.view.base.BaseFragment;
 
 import org.litepal.LitePal;
-import org.litepal.exceptions.DataSupportException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 import butterknife.BindView;
 import okhttp3.Call;
@@ -42,6 +40,8 @@ public class NeteaseMusicFragment extends BaseFragment {
     RecyclerView recyclerView;
     @BindView(R.id.swipeRefresh)
     SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.netease_tag)
+    TextView tag;
 
     private List<NeteaseMusicListBean> beans = new ArrayList<>();
     private OkHttpClient okHttpClient = new OkHttpClient();
@@ -90,6 +90,7 @@ public class NeteaseMusicFragment extends BaseFragment {
                     recyclerView.setAdapter(adapter);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     adapter.notifyDataSetChanged();
+                    tag.setVisibility(View.GONE);
                 }
             });
         }
@@ -143,6 +144,7 @@ public class NeteaseMusicFragment extends BaseFragment {
                                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                                     adapter.notifyDataSetChanged();
                                     swipeRefreshLayout.setRefreshing(false);
+                                    tag.setVisibility(View.GONE);
                                 }
                             });
                         }

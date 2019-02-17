@@ -20,7 +20,6 @@ import com.google.gson.JsonParser;
 import com.mepride.musicflow.beans.MusicBean;
 import com.mepride.musicflow.beans.Song;
 import com.mepride.musicflow.utils.GsonHelper;
-import com.mepride.musicflow.utils.ToastUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -249,7 +248,6 @@ public class MusicService extends Service implements
                 getTencentMusic(song);
             }
         } else {
-            ToastUtils.show( "Music playback error");
         }
     }
 
