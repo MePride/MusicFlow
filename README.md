@@ -11,8 +11,8 @@
 - 搜索页
 - 私人FM
 
-![pic1](image\pic1.png)
+![pic1](https://raw.githubusercontent.com/MePride/MusicFlow/master/image/pic1.png)
 
-![pic2](image\pic2.png)
+![pic2](https://raw.githubusercontent.com/MePride/MusicFlow/master/image/pic2.png)
 
-![pic3](image\pic3.png)
+![pic3](https://raw.githubusercontent.com/MePride/MusicFlow/master/image/pic3.png)
